@@ -1,2 +1,2 @@
 # tgbot
-A telegram AI bot that can use customized model providers.
+An example telegram AI bot that can use customized model providers.
