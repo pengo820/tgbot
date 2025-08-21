@@ -45,7 +45,7 @@ def _build_messages(user_input: str, history: List[Dict[str, str]]) -> List[Dict
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """发送欢迎消息，同时不清空历史（便于再次 /start 后继续）"""
-    await update.message.reply_text('你好，我是AI助手！请直接输入你的问题吧～\n'
+    await update.message.reply_text('你好，我是你的AI助手！请直接输入你的问题吧～\n'
                                     '提示：发送 /clear 可清空本聊天的对话记忆。')
 
 async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -113,5 +113,5 @@ def main() -> None:
     # 启动机器人
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
-if name == "__main__":
+if __name__ == "__main__":
     main()
